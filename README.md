@@ -1,3 +1,2 @@
 # Namokar
-An angular app that helps in pratyakhyan for jain
-s
+An angular app that helps in pratyakhyan for jain community.
