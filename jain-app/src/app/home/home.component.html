@@ -1,0 +1,115 @@
+<app-nav></app-nav>
+<div class="container" style="margin-top:5%" >
+<div class="row">
+  <div class="col-md-2">
+
+  </div>
+  <div class="col-md-8">
+    
+    <div class="jumbotron">
+      <h3 style="text-align:center">Date: <span >{{date | date}}</span></h3>
+      <form >
+          <div class="form-group">
+            <div class="input-group">
+              <input type="date" class="form-control" placeholder="yyyy-mm-dd"
+                     name="dateR" [(ngModel)]="da" (change)="dC()"  >
+              
+            </div>
+          </div>
+        </form>
+        
+      <br/>
+      <a class="carousel-control-prev"  (click)="dateminus()" >
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" (click)=dateadd() >
+        <span class="carousel-control-next-icon"></span>
+      </a>
+      
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row">
+            <div class=col-md-6></div>
+            <div class="col-md-6"><img class="img-fluid img-thumbnail mx-auto d-block" style="height:50px" src="../../assets/sunrise.gif"></div>
+          </div>
+          
+        </div>
+        <div class="col-md-4" style="margin-top:10px;text-align: center;">
+          Sunrise:
+        </div>
+        <div class="col-md-4" style="margin-top:10px;text-align: center;">
+          {{sunrise}}
+        </div>
+      </div>
+      <br />
+      <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class=col-md-6></div>
+              <div class="col-md-6"><img class="img-fluid img-thumbnail mx-auto d-block" style="height:50px" src="../../assets/navkarsi.gif"></div>
+            </div>
+            
+          </div>
+          <div class="col-md-4" style="margin-top:10px;text-align: center;">
+            Navkarsi:
+          </div>
+          <div class="col-md-4" style="margin-top:10px;text-align: center;">
+            {{navkarsi}}
+          </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+              <div class="row">
+                <div class=col-md-6></div>
+                <div class="col-md-6"><img class="img-fluid img-thumbnail mx-auto d-block" style="height:50px" src="../../assets/porsi.gif"></div>
+              </div>
+              
+            </div>
+            <div class="col-md-4" style="margin-top:10px;text-align: center;">
+              Porsi:
+            </div>
+            <div class="col-md-4" style="margin-top:10px;text-align: center;">
+              {{porsi}}
+            </div>
+          </div>
+
+          <br />
+        <div class="row">
+            <div class="col-md-4">
+              <div class="row">
+                <div class=col-md-6></div>
+                <div class="col-md-6"><img class="img-fluid img-thumbnail mx-auto d-block" style="height:50px" src="../../assets/doporsi.gif"></div>
+              </div>
+              
+            </div>
+            <div class="col-md-4" style="margin-top:10px;text-align: center;">
+              DoPorsi:
+            </div>
+            <div class="col-md-4" style="margin-top:10px;text-align: center;">
+              {{doporsi}}
+            </div>
+          </div>
+          <br />
+        <div class="row">
+            <div class="col-md-4">
+              <div class="row">
+                <div class=col-md-6></div>
+                <div class="col-md-6"><img class="img-fluid img-thumbnail mx-auto d-block" style="height:50px" src="../../assets/sunset.gif"></div>
+              </div>
+              
+            </div>
+            <div class="col-md-4" style="margin-top:10px;text-align: center;">
+              Sunset:
+            </div>
+            <div class="col-md-4" style="margin-top:10px;text-align: center;">
+              {{sunset}}
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="col-md-2">
+    
+  </div>
+</div>
+</div>
