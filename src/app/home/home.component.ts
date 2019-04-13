@@ -97,7 +97,7 @@ export class HomeComponent implements OnInit {
       
       var s=Math.floor((mm+old)/60)
       hour+=hh+s
-      if (hour>12){
+      if (hour>=12){
         hour=hour-12;
         var temp=arr[2].split(" ")
         if (temp[1]=="AM"){
