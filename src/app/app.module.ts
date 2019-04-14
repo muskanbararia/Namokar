@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodayComponent } from './today/today.component';
 import { DigitalClockComponent } from './digital-clock/digital-clock.component';
 import { UtilService } from './shared/services/util/util.service';
+import { SearchComponent } from './search/search.component';
+import { ResultComponent } from './result/result.component';
+import { DonateComponent } from './donate/donate.component';
+import { VideoComponent } from './video/video.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +22,10 @@ import { UtilService } from './shared/services/util/util.service';
     NavComponent,
     TodayComponent,
     DigitalClockComponent,
+    SearchComponent,
+    ResultComponent,
+    DonateComponent,
+    VideoComponent,
 
   ],
   imports: [

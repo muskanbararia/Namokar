@@ -11,9 +11,15 @@ export class AppService {
   getToday(lat:any,lon:any,date:any):Observable<any>{
     var y=date.getFullYear();
     var m=date.getMonth();
+    m=parseInt(m)+1
     var d=date.getDate();
     date=y+"-"+m+"-"+d
-    return this.http.get("https://api.sunrise-sunset.org/json?lat="+lat+"&lng="+lon+"&date="+date).pipe(catchError(this.errorHandler));
+    var a= this.http.get("https://api.sunrise-sunset.org/json?lat="+lat+"&lng="+lon+"&date="+date).pipe(catchError(this.errorHandler));
+    //alert(a)
+    return a;
+  }
+  getLatLon(location:string):Observable<any>{
+    return this.http.get("https://us1.locationiq.com/v1/search.php?key=4623cb06915ada&q="+location+"&format=json").pipe(catchError(this.errorHandler));
   }
   errorHandler(error: HttpErrorResponse) {
     console.error(error);

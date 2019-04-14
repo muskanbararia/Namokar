@@ -5,9 +5,9 @@
 
   </div>
   <div class="col-md-8">
-    
     <div class="jumbotron">
       <div *ngIf="!error">
+        <h4 style="text-align:center">Location: <span >{{location }}</span></h4>
       <h3 style="text-align:center">Date: <span >{{date | date}}</span></h3>
       <form >
           <div class="form-group" style="text-align:center">
@@ -110,9 +110,9 @@
             </div>
           </div>
     </div>
-    <div *ngIf="error">
-      <p>Server error</p>
-    </div>
+  </div>
+  <div *ngIf="error">
+    <p>Server Down</p>
   </div>
   </div>
   <div class="col-md-2">

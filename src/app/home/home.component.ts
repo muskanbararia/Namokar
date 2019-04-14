@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   dat:Date;
   date:Date;
   da:any;
+  error:boolean=false;
   ngOnInit() {
     if (window.navigator && window.navigator.geolocation) {
       window.navigator.geolocation.getCurrentPosition(
@@ -41,7 +42,8 @@ export class HomeComponent implements OnInit {
                   this.doporsi=this.add(this.sunrise,0,2*temp)
                 },
                 error=>{
-                  alert("Sorry")
+                  this.error=true;
+                  //alert("Sorry")
                 }
       )
           },
@@ -72,7 +74,8 @@ export class HomeComponent implements OnInit {
                   this.doporsi=this.add(this.sunrise,0,2*temp)
                 },
                 error=>{
-                  alert("Sorry")
+                  this.error=true;
+                  //alert("Sorry")
                 }
       )
           }
@@ -98,9 +101,12 @@ export class HomeComponent implements OnInit {
       var s=Math.floor((mm+old)/60)
       hour+=hh+s
       if (hour>=12){
-        hour=hour-12;
+        if (hour>12){
+          hour=hour-12;
+        }
+        
         var temp=arr[2].split(" ")
-        if (temp[1]=="AM"){
+        if (temp[1]=="AM" ){
           temp[1]="PM"
         }
         else{
@@ -122,10 +128,10 @@ export class HomeComponent implements OnInit {
     
     var ret=0
     if (ms-mr>=0){
-      ret=Math.floor(((ms-mr)+((hs-hr)*60))/4)
+      ret=Math.ceil(((ms-mr)+((hs-hr)*60))/4)
     }
     else{
-      ret=Math.floor((60+ms-mr)+((hs-hr-1)*60)/4)
+      ret=Math.ceil(((60+ms-mr)+((hs-hr-1)*60))/4)
     }
     return ret;
   }
